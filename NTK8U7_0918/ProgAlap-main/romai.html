@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.20.0.css">
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.20.0.js"></script>
+</body>
+
+<script>
+	function convertToRoman(n) {
+
+	romanNumber="";
+
+		if(goodNumber(n)){
+			if (n == 1){
+				return 'I';
+			if (n<=3){
+				for(i=0; i < n; i++){
+					romanNumber += "I";
+				}
+			}
+			else if(n == 4){
+				return 'IV';
+				romanNumber = 'IV';
+			}
+			else if (n == 5){
+				romanNumber = 'V';
+			}
+			else if (n == 10){
+				romanNumber = 'X';
+			}
+
+		}
+
+		else{
+			return "wrong number";
+		}
+
+		return romanNumber;
+
+	}
+	function goodNumber(n){
+		if(n <= 0){
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+  QUnit.module('convertToRoman', function() {
+    QUnit.test('egy', function(assert) {
+      assert.equal(convertToRoman(1),'I');
+    });
+	QUnit.test('rossz', function(assert) {
+      assert.equal(convertToRoman(-1),'wrong number');
+    });
+	QUnit.test('harom', function(assert) {
+      assert.equal(convertToRoman(3),'III');
+    });
+	QUnit.test('negy', function(assert) {
+      assert.equal(convertToRoman(4),'IV');
+    });
+	QUnit.test('ot', function(assert) {
+      assert.equal(convertToRoman(5),'V');
+    });
+	QUnit.test('tiz', function(assert) {
+      assert.equal(convertToRoman(10),'X');
+    });
+
+
+  });
+</script>
