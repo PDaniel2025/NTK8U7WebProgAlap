@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video lejátszása</title>
+    <style>
+        .grid {
+            margin-top:  2rem;
+            display: grid;
+            grid-template-columns: 1fr 2.5fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 1rem;
+            width: 40rem;
+        }
+        footer{
+            border-top: 4 px solid gray;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            width: 37.5rem;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Videó lejátszása_NTK8U7</h1>
+    </header>
+    <section>
+        <video src="NTK8U7_video.mp4" autoplay="false" controls width="600"></video>
+        <div class="grid">            <div>
+                <button id="stop">Megállítás</button>
+            </div>
+            <div>
+                <button id="startstop">Néma</button>
+            </div>
+            <div>
+                <button id="mute">Néma</button>
+                <button id="quite">Halk</button>
+                <button id="loud">Hangos</button>
+            </div>
+            <div>
+                <button id="veryslow">Nagyon lassú</button>
+                <button id="slow">Lassú</button>
+                <button id="normal">Normál</button>
+                <button id="fast">Gyors</button>
+                <button id="veryfast">Nagyon gyors</button>
+            </div>
+            <div>
+                <button id="small">Kicsi</button>
+                <button id="normalsize">Normál</button>
+                <button id="big">Nag</button>
+            </div>
+                        <div>
+                <button id="hasitented">Befejeződött-e?</button>
+                <button id="length">Videó hossza (mp)</button>
+                <button id="currently">Jelenlegi pozícíó</button>
+            </div>
+    </section>
+</body>
+</html>
