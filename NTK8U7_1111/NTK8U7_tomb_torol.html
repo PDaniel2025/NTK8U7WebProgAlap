@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Tömb elemeik törlése</h3>
+
+    <strong>Előtte:</strong> <p id="NTK8U7"></p>
+    <strong>Utána:</strong> <p id="NTK8U7_2"></p>
+
+    <button onclick="torol1()">Tömb 0. indexű elemének törlése</button>
+    <button onclick="torol2()">Tömb 1. indexű elemének törlése</button>
+    <button onclick="torol3()">Tömb 2. indexű elemének törlése</button>
+
+    <script>
+        let prognyelvek = ["HTML5" , "CSS3" , "JS"];
+        document.getElementById("NTK8U7").innerHTML = prognyelvek;
+
+        function torol0() {
+            delete prognyelvek[0];
+            document.getElementById("NTK8U7").innerHTML = prognyelvek;
+        }
+
+        function torol1() {
+            delete prognyelvek[1];
+            document.getElementById("NTK8U7").innerHTML = prognyelvek;
+        }
+
+        function torol2() {
+            delete prognyelvek[2];
+            document.getElementById("NTK8U7").innerHTML = prognyelvek;
+        }
+    </script>
+</body>
+</html>
