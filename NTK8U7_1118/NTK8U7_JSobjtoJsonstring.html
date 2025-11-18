@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3></h3>
+
+    <strong>JSON:</strong>
+    <p id="NTK8U7"></p>
+
+    <button onclick="olvasas()">JSON beolvasás</button>
+
+    <script>
+        function olvasas() {
+            const JSONdata = '[{"nev":"HTML5","kiterjesztes",".html"},{"nev":"CSS3","kiterjesztes":"css"},{"nev","JavaScript","kiterjesztes":".js"}]';
+
+            const obj = JSON.parse(JSONdata);
+
+            let i=0;
+
+            let szovegKiír="";
+
+            while(i < 3) {
+                szovegKiír += "Név: " + obj[i].nev + ", kiterjesztes: " + obj[i].
+                kiterjesztes + "<br>";
+                i++;
+            }
+
+            document.getElementById("NTK8U7").innerHTML = szovegKiír;
+
+        }
+    </script>
+    
+</body>
+</html>
