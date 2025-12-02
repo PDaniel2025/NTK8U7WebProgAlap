@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    let szamok = [-241, 41, 421, 0, 31, -31, 7, -3, 7];
+    let pozitivSzamok = [];
+    let nempozitivSzamok = [];
+    let nullaSzamok = [];
+
+    function elagazas() {
+        for (let i=0; i < szamok.length; i++) {
+            if (szamok[i] > 0) 
+            {
+                pozitivSzamok.push(szamok[i]);
+            } 
+            else if (szamok[i] < 0)
+            {
+                nempozitivSzamok.push(szamok[i]);
+            }
+            else
+            {
+                nullaSzamok.push(szamok[i]);
+            }
+            document.getElementById("pozitiv").innerHTML = pozitivSzamok;
+            document.getElementById("negativ").innerHTML = nempozitivSzamok;
+            document.getElementById("nulla").innerHTML = nullaSzamok;
+        }
+    }
+</script>
+
+</head>
+<body>
+    <h2>If elágazás</h2>
+    Pozitiv számok: <p id="pozitiv"></p>
+    Nem pozitiv számok: <p id="negativ"></p>
+    Nulla: <p id="nulla"></p>
+<button onclick="elagazas()">Pozitiv és nem pozitiv számok</button>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+    "NTK8U7_orarend": {
+        "ora": [
+            {
+                "targy": "Szovtvertesztelés",
+                "idopont" {
+                    "nap": "hétfő",
+                    "tol": 10,
+                    "ig": 12
+                },
+                "helyszín": "Inf. 145",
+                "oktato": "Dr. Bednarik László",
+            },
+        ]
+    }
+}

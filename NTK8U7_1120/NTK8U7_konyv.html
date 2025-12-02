@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3></h3>
+
+    <div id="konyvlista"></div>
+
+    <script>
+        let konyvekJSON = {
+    "konyvek": {
+        "konyv": [
+            {
+                "iro": "Nyékyné Dr. Gaizler Judit",
+                "cím": "Java 2 I-II. - Útikalauz programozóknak 5.0",
+                "kiadas": 2009
+            },
+            {
+               "iro": "Reiter István",
+                "cím": "C# programozás lépésről lépésre",
+                "kiadas": 2018
+            }
+        ]
+    }
+};
+
+let konyvlistaElem = document.getElementById("konyvlista");
+
+let konyvlistaHTML = "<ul>";
+    for (let i = 0; i < konyvekJSON.konyvek.konyv.length; i++) {
+        konyvlistaHTML += "<li><strong>Szerző: </strong>" + konyv.szerzo +
+        "<strong> cím: </strong>" + konyv.cím + "<strong> Kiadás éve: </strong>"
+        + konyv.kiadas_eve + "</li>";
+    }
+
+    konyvlistaHTML += "</ul>";
+
+    konyvlistaElem.innerHTML = konyvlistaHTML
+    </script>
+</body>
+</html>
