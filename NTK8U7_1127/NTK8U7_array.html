@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tömbökön keresztül </h1>
+
+    <div id="jsonNTK8U7"></div>
+
+    <script>
+        const BLOBj = {
+            "name": "Percsi Dániel",
+            "age": 21,
+            "cars": [
+                {"name":"Toyota", "models":["CHR", "Corolla", "Proace"]},
+                {"name":"Ford", "models":["Kuga", "Mondeo", "Mustang"]},
+                {"name":"BMW", "models":["320", "X3", "X5"]},
+                {"name":"Fiat", "models":["500", "Panda", "Tipo"]}
+            ]
+        };
+
+        const jsonFCLYRR = document.getElementById('jsonNTK8U7');
+
+        const h2 = document.createElement('h2');
+        h2.innerHTML = `<span><b>${BLOBj["name"]}</b><br></span> (${BLOBj["age"]})`;
+        jsonFCLYRR.appendChild(h2);
+
+        for (let i = 0; i < BLOBj["cars"].length; i++) {
+
+            const h3 = document.createElement('h3');
+            h3.innerHTML = `<span><b>${BLOBj["cars"][i]["name"]}</b></span>`;
+            jsonFCLYRR.appendChild(h3);
+
+            const ul = document.createElement('ul');
+            jsonFCLYRR.appendChild(ul);
+
+            for (let j = 0; j < BLOBj["cars"][i]["models"].length; j++) {
+                const li = document.createElement("li");
+                li.innerHTML = BLOBj["cars"][i]["models"][j];
+                ul.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>
